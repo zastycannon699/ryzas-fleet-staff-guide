@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ryza's Fleet staff moderation guide." />
+    <title>𝑹𝒚𝒛𝒂's 𝑭𝒍𝒆𝒆𝒕 | Staff Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ryza's Fleet home">
+        <span class="brand-sigil"><img src="assets/images/ryza-avatar.png" alt="" /></span>
+        <span>𝑹𝒚𝒛𝒂's <em>𝑭𝒍𝒆𝒆𝒕</em></span>
+      </a>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#policies">Punishment guide</a>
+        <a href="#help">Ask staff</a>
+      </nav>
+      <button class="theme-button" id="themeButton" type="button" aria-label="Switch to dark mode" title="Switch color theme">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="pageTitle">
+        <div class="eyebrow"><span></span> STAFF HANDBOOK <span></span></div>
+        <h1 id="pageTitle">Steady staff.<br /><i>Stronger fleet.</i></h1>
+        <p class="lead">The official punishment reference for Ryza's Fleet staff, presented as a clearer, searchable table.</p>
+        <div class="intro-meta">
+          <span><b>Last updated</b> <time datetime="2026-09-06">September 6, 2026</time></span>
+          <span><b>Applies to</b> Staff desk · Discord · In-game</span>
+        </div>
+      </section>
+
+      <section class="notice" aria-label="Moderator discretion notice">
+        <span class="notice-icon" aria-hidden="true">!</span>
+        <div>
+          <strong>The punishment sheet is a baseline.</strong>
+          <p>Final punishment remains at the moderator’s discretion, but absurd punishments for invalid reasons can result in disciplinary action.</p>
+        </div>
+      </section>
+
+      <section class="dashboard" id="policies" aria-labelledby="policiesTitle">
+        <div class="section-heading">
+          <div>
+            <p class="overline">MODERATION MATRIX</p>
+            <h2 id="policiesTitle">Staff response guide</h2>
+          </div>
+          <p id="ruleCount" class="rule-count" aria-live="polite"></p>
+        </div>
+
+        <div class="controls">
+          <label class="search-box" for="ruleSearch">
+            <span aria-hidden="true">⌕</span>
+            <input id="ruleSearch" type="search" placeholder="Search a rule, punishment, or escalation" autocomplete="off" />
+            <kbd>⌘ K</kbd>
+          </label>
+        </div>
+
+        <div class="policy-table" role="region" aria-label="Punishment guide" tabindex="0">
+          <div class="table-head" aria-hidden="true">
+            <span></span><span>Rule</span><span>Punishment</span><span>Escalation</span>
+          </div>
+          <div id="rulesList" class="rules-list"></div>
+          <p id="noResults" class="no-results" hidden>No published rules match that search.</p>
+        </div>
+      </section>
+
+      <section class="help" id="help" aria-labelledby="helpTitle">
+        <div>
+          <p class="overline">QUESTIONS ABOUT A PUNISHMENT?</p>
+          <h2 id="helpTitle">Ask the admins on Discord.</h2>
+          <p>If you have any questions regarding a punishment, don’t feel afraid to ask an admin.</p>
+        </div>
+        <div class="help-link" role="note" aria-label="Discord admins: midlifecrisis11 and zastycannon699 underscore fr">
+          <span>Ask the admins on Discord</span>
+          <small>@midlifecrisis11 · @zastycannon699_fr</small>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> 𝑹𝒚𝒛𝒂's 𝑭𝒍𝒆𝒆𝒕</span>
+      <span>Staff guide · v1.0</span>
+      <span>Made by @zastycannon699_fr</span>
+    </footer>
+
+    <template id="ruleTemplate">
+      <article class="rule-row">
+        <span class="rule-index"></span>
+        <strong class="rule-title"></strong>
+        <span class="rule-punishment"></span>
+        <span class="rule-escalation"></span>
+      </article>
+    </template>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
